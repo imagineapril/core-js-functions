@@ -213,7 +213,7 @@ function logger(func, logFunc) {
  *   partialUsingArguments(fn, 'a','b','c','d')() => 'abcd'
  */
 function partialUsingArguments(fn, ...args) {
-  return function (...moreArgs) {
+  return function partialUsingMoreArguments(...moreArgs) {
     return fn(...args, ...moreArgs);
   };
 }
